@@ -1,0 +1,181 @@
+.footer-section {
+  background: #ffffff;
+  padding: 28px 2.5% 18px;
+  position: relative;
+  overflow: hidden;
+  font-family: 'Inter', sans-serif;
+  border-top: 1px solid #eef2f7;
+}
+
+/* Watercolor edges like screenshot */
+.ft-water {
+  position: absolute;
+  z-index: 0;
+  pointer-events: none;
+}
+.left-water {
+  left: -20px;
+  bottom: 0;
+  width: 250px;
+  height: 90px;
+  background: radial-gradient(ellipse at 20% 50%, #b9d6f3 0%, #d8e9fb 50%, transparent 70%);
+  opacity: 0.6;
+  border-radius: 0 60% 0 0;
+}
+.right-water {
+  right: -10px;
+  bottom: 0;
+  width: 220px;
+  height: 80px;
+  background: radial-gradient(ellipse at 80% 50%, #ffcc99 0%, #ffe6cc 60%, transparent 70%);
+  opacity: 0.7;
+  border-radius: 60% 0 0 0;
+}
+
+/* Top Row */
+.footer-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  max-width: 1450px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+  flex-wrap: wrap;
+}
+
+/* Logo */
+.ft-logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.ft-logo-icon {
+  font-size: 30px;
+  background: linear-gradient(135deg, #0e2a5a 50%, #ff7a00 50%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ft-logo h3 {
+  font-size: 24px;
+  font-weight: 900;
+  color: #0e2240;
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 0.3px;
+}
+.ft-logo span {
+  font-size: 13.5px;
+  color: #6b7a90;
+  font-weight: 500;
+  letter-spacing: 0.2px;
+}
+
+/* Nav */
+.ft-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 14px;
+  flex: 1;
+  justify-content: center;
+}
+.ft-nav a {
+  text-decoration: none;
+  font-size: 13.5px;
+  color: #222;
+  font-weight: 500;
+  position: relative;
+  padding-bottom: 3px;
+  transition: 0.2s;
+}
+.ft-nav a:hover {
+  color: #0e2240;
+}
+.ft-nav a.active {
+  font-weight: 700;
+  color: #0e1e3d;
+}
+.ft-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background: #1a5daa;
+  border-radius: 2px;
+}
+
+/* Language */
+.ft-lang {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #fff;
+  border: 1px solid #e8ecf1;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #222;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+.ft-lang .flag {
+  font-size: 16px;
+}
+.ft-lang .arrow {
+  font-size: 12px;
+  color: #888;
+  margin-left: 2px;
+}
+
+/* Bottom */
+.footer-bottom {
+  text-align: center;
+  margin-top: 22px;
+  position: relative;
+  z-index: 1;
+}
+.footer-bottom p {
+  font-size: 13px;
+  color: #5a6b84;
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 1100px) {
+  .footer-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+  }
+  .ft-nav {
+    justify-content: flex-start;
+    gap: 10px 14px;
+  }
+}
+
+@media (max-width: 600px) {
+  .ft-nav {
+    gap: 8px 12px;
+  }
+  .ft-nav a {
+    font-size: 12.5px;
+  }
+  .ft-logo h3 {
+    font-size: 20px;
+  }
+  .footer-section {
+    padding: 20px 4% 14px;
+  }
+}

@@ -1,0 +1,129 @@
+.testimonials {
+  background: #f6f9ff;
+  padding: 70px 6% 60px;
+  font-family: 'Inter', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.t-header {
+  text-align: center;
+}
+.t-badge {
+  border: 1px solid #bcd0ea;
+  background: #e6eef9;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #2a5a9a;
+}
+.t-header h2 {
+  font-size: 40px;
+  font-weight: 800;
+  color: #0e2240;
+  margin: 12px 0 6px;
+}
+.t-header h2 span { color: #f58a1f; }
+.t-header p { color: #6b7a90; font-size: 16px; margin: 0; }
+
+/* Body - Important Fix */
+.t-body {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  max-width: 1250px;
+  margin: 60px auto 0;
+  position: relative;
+}
+
+.t-cards-area {
+  position: relative;
+  width: 850px; /* fixed width taaki step rahe */
+  height: 500px;
+  flex-shrink: 0;
+}
+
+/* Watercolor */
+.watercolor {
+  position: absolute;
+  left: 180px;
+  top: 0;
+  width: 520px;
+  height: 520px;
+  background: radial-gradient(circle at 35% 35%, #2e5da9 0%, #244a8a 35%, #e99a3e 85%);
+  border-radius: 45% 55% 55% 45% / 50% 45% 55% 50%;
+  z-index: 0;
+  opacity: 0.9;
+}
+
+/* Cards - STEP DESIGN FIX */
+.t-card {
+  position: absolute;
+  background: #fff;
+  width: 300px;
+  border-radius: 16px;
+  box-shadow: 0 12px 35px rgba(15, 50, 100, 0.08);
+  padding: 18px 18px 0;
+  z-index: 2;
+  overflow: hidden;
+}
+.t-card::after {
+  content: '';
+  display: block;
+  height: 6px;
+  background: #8fb0d8;
+  width: 70px;
+  border-radius: 0 10px 0 0;
+  margin-top: 12px;
+  margin-left: -18px;
+}
+.blue-corner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 62px;
+  height: 38px;
+  background: #1e5bb0;
+  border-radius: 0 0 0 22px;
+}
+
+/* YEHI STEP HAI */
+.t-card-1 {
+  left: 0px;
+  top: 0px;
+  z-index: 3;
+}
+.t-card-2 {
+  left: 285px;
+  top: 115px;
+  z-index: 2;
+}
+.t-card-3 {
+  left: 540px;
+  top: 230px;
+  z-index: 1;
+}
+
+.t-user { display: flex; gap: 10px; align-items: center; }
+.t-user img { width: 52px; height: 52px; border-radius: 50%; object-fit: cover; }
+.t-user h4 { margin: 0; font-size: 18px; font-weight: 800; color: #0e2240; }
+.t-user small { font-size: 14px; color: #333; }
+.t-stars { color: #f58a1f; margin: 10px 0 8px; font-size: 17px; letter-spacing: 2px; }
+.t-card p { font-size: 14px; line-height: 1.4; color: #111; margin: 0; font-weight: 500; padding-bottom: 2px; }
+
+/* Phone */
+.t-phone { width: 320px; margin-left: 10px; margin-top: -10px; position: relative; z-index: 4; }
+.t-phone img { width: 100%; filter: drop-shadow(0 15px 30px rgba(0,0,0,0.12)); }
+
+.t-slogan { text-align: center; font-family: 'Caveat', cursive; color: #e68a2a; font-size: 36px; margin-top: 40px; }
+
+/* Mobile par hi vertical hoga */
+@media (max-width: 768px) {
+  .t-body { flex-direction: column; align-items: center; }
+  .t-cards-area { width: 100%; height: auto; display: flex; flex-direction: column; gap: 20px; align-items: center; }
+  .t-card { position: relative; left: auto !important; top: auto !important; width: 100%; max-width: 350px; }
+  .watercolor { display: none; }
+  .t-phone { width: 260px; margin: 20px auto 0; }
+  .t-header h2 { font-size: 28px; }
+}

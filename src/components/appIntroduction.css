@@ -1,0 +1,5 @@
+.appIntroduction { display: flex; justify-content: space-between; align-items: center; padding: 70px 40px; background: #F7F9FC; }
+.app-phone img { width: 800px; }
+.app-content h2 { font-size: 38px; color: #0B1F3A; }
+.app-content .gradient { background: linear-gradient(90deg,#1261A0,#FF7A00); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+.app-card { background: rgba(255,255,255,0.8); backdrop-filter: blur(10px); border-radius: 16px; padding: 18px; border: 1px solid #e5e7eb; margin-top: 20px; }

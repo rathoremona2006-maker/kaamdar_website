@@ -1,0 +1,4 @@
+* { box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { margin: 0; background: #F7F9FC; }
+.app-container { width: 100%; overflow-x: hidden; }
+section { scroll-margin-top: 80px; }
